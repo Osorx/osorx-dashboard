@@ -220,12 +220,33 @@ document.getElementById("weather").innerHTML =
 </script>
 <div class="card">
 <h2>🚗 Traffic</h2>
-<div class="grid">
-<input placeholder="From (Home / City)">
-<input placeholder="To (Work / Destination)">
+<input id="home" placeholder="Home">
+<br><br>
+<input id="work" placeholder="Work">
+<br><br>
+<input id="arrival" type="time">
+<br><br>
+<button onclick="calculateTraffic()">
+Calculate
+</button>
+<div id="trafficResult" style="margin-top:15px;">
 </div>
 </div>
-<div class="card">
+<script>
+function calculateTraffic() {
+const home =
+document.getElementById("home").value;
+const work =
+document.getElementById("work").value;
+const arrival =
+document.getElementById("arrival").value;
+document.getElementById("trafficResult").innerHTML =
+"<p><strong>Home:</strong> " + home + "</p>" +
+"<p><strong>Work:</strong> " + work + "</p>" +
+"<p><strong>Arrival Time:</strong> " + arrival + "</p>" +
+"<p>✅ Traffic module ready for live routing API.</p>";
+}
+</script><div class="card">
 <h2>🚨 Alerts</h2>
 <p>
 Severe weather, earthquakes, transport disruptions and major global alerts.
