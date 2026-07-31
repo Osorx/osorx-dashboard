@@ -171,9 +171,18 @@ Featured News Image
 </div>
 <div class="card">
 <h2>🌦 Weather</h2>
-<p>Current conditions, forecasts and weather warnings.</p>
+<div id="weather">
+Loading weather...
 </div>
-<div class="card">
+</div>
+<script>
+fetch('https://api.open-meteo.com/v1/forecast?latitude=46.05&longitude=14.51&current=temperature_2m')
+.then(response => response.json())
+.then(data => {
+document.getElementById("weather").innerHTML =
+"Ljubljana: " + data.current.temperature_2m + "°C";
+});
+</script><div class="card">
 <h2>🚗 Traffic</h2>
 <div class="grid">
 <input placeholder="From (Home / City)">
