@@ -3,252 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OSORX</title>
+<title>OSORX AI</title>
 <style>
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f1f5f9;
-color:#1e293b;
-}
-header{
-background:#0f172a;
+background:#111827;
+font-family:Arial, sans-serif;
 color:white;
-padding:25px;
-text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
 }
 .container{
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-.card{
-background:white;
-padding:25px;
+width:90%;
+max-width:700px;
+background:#1f2937;
+padding:30px;
 border-radius:20px;
-margin-bottom:20px;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+box-shadow:0 0 20px rgba(0,0,0,.3);
 }
-.hero{
-background:linear-gradient(135deg,#2563eb,#4f46e5);
-color:white;
-}
-.news-image{
-height:300px;
-background:#cbd5e1;
-border-radius:15px;
+.avatar{
+width:150px;
+height:150px;
+border-radius:50%;
+background:#2563eb;
+margin:auto;
 display:flex;
 align-items:center;
 justify-content:center;
-margin-bottom:20px;
-font-weight:bold;
+font-size:50px;
 }
-.radar{
-height:180px;
-background:#1e293b;
-color:#cbd5e1;
-border-radius:15px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-top:15px;
+h1{
+text-align:center;
 }
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-.market-box{
-background:#f8fafc;
+#chat{
+height:250px;
+overflow:auto;
+background:#111827;
 padding:15px;
-border-radius:15px;
-}
-button{
-background:#0f172a;
-color:white;
-border:none;
-padding:12px 20px;
 border-radius:10px;
-cursor:pointer;
-}
-.socials span{
-margin-right:20px;
-color:#2563eb;
-font-weight:bold;
+margin-bottom:15px;
 }
 input{
 width:100%;
 padding:12px;
+border:none;
 border-radius:10px;
-border:1px solid #cbd5e1;
 box-sizing:border-box;
+}
+button{
+margin-top:10px;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+}
+.user{
+color:#60a5fa;
+margin-bottom:10px;
+}
+.ai{
+color:#34d399;
+margin-bottom:10px;
 }
 </style>
 </head>
 <body>
-<header>
-<h1>OSORX</h1>
-</header>
 <div class="container">
-<div class="card">
-<h2>Welcome to OSORX</h2>
-<p><strong>Here is everything you need to know for your daily routine.</strong></p>
-<p>
-OSORX brings together the most important information from around the world in one place.
-Instead of checking several different websites every morning, you can view weather,
-global headlines, market movements, traffic conditions and major alerts from a single dashboard.
-</p>
-<p>
-Whether you are preparing for work, planning your day, following financial markets,
-tracking storms across Europe and North America or checking your daily commute,
-OSORX helps you stay informed quickly and efficiently.
-</p>
-<button>Read More</button>
-<h3>What OSORX Includes</h3>
-<ul>
-<li>Global Overview</li>
-<li>Top News</li>
-<li>Markets</li>
-<li>Weather</li>
-<li>Traffic</li>
-<li>Alerts</li>
-</ul>
-<h3>Follow OSORX</h3>
-<div class="socials">
-<span>Facebook</span>
-<span>X</span>
-<span>Instagram</span>
+<div class="avatar">
+🤖
+</div>
+<h1>OSORX AI</h1>
+<div id="chat">
+<div class="ai">
+Hello. I am OSORX AI. How can I help you today?
 </div>
 </div>
-<div class="card hero">
-<h2>🌍 Global Overview</h2>
-<p>Europe + North America live weather radar.</p>
-<iframe
-width="100%"
-height="400"
-src="https://embed.windy.com/embed2.html?lat=50&lon=-30&detailLat=50&detailLon=-30&width=650&height=450&zoom=3&level=surface&overlay=radar&product=radar"
-frameborder="0">
-</iframe>
-</div>
-<div class="card"><h2>📰 Top News</h2>
-<div class="news-image">
-Featured News Image
-</div>
-<ul>
-<li>Global markets react to economic data</li>
-<li>Major weather systems move across Europe</li>
-<li>US business developments</li>
-<li>Energy prices and supply updates</li>
-<li>Top international headlines of the day</li>
-</ul>
-</div>
-<div class="card">
-<h2>📊 Markets</h2>
-<div class="grid">
-<div class="market-box">
-<h3>Stocks</h3>
-<p>S&P 500</p>
-<p>Nasdaq</p>
-<p>DAX</p>
-<p>FTSE</p>
-</div>
-<div class="market-box">
-<h3>Crypto</h3>
-<p>Bitcoin</p>
-<p>Ethereum</p>
-<p>Solana</p>
-</div>
-<div class="market-box">
-<h3>Forex</h3>
-<p>EUR/USD</p>
-<p>GBP/USD</p>
-<p>USD/JPY</p>
-</div>
-<div class="market-box">
-<h3>Commodities</h3>
-<p>Gold</p>
-<p>Silver</p>
-<p>Oil</p>
-</div>
-</div>
-</div>
-<div class="card">
-<h2>🌦 Weather</h2>
-<select id="citySelect">
-<option value="52.52,13.41">Berlin</option>
-<option value="48.13,11.57">Munich</option>
-<option value="51.50,-0.12">London</option>
-<option value="48.85,2.35">Paris</option>
-<option value="46.05,14.51">Ljubljana</option>
-<option value="45.81,15.98">Zagreb</option>
-<option value="40.71,-74.00">New York</option>
-<option value="41.88,-87.63">Chicago</option>
-</select>
-<button onclick="loadWeather()">
-Get Weather
+<input
+id="message"
+placeholder="Type your message..."
+>
+<button onclick="sendMessage()">
+Send
 </button>
-<div id="weather" style="margin-top:15px;">
-Select a city...
-</div>
 </div>
 <script>
-function loadWeather() {
-const value =
-document.getElementById("citySelect").value;
-const parts = value.split(",");
-const lat = parts[0];
-const lon = parts[1];
-fetch(
-"https://api.open-meteo.com/v1/forecast?latitude=" +
-lat +
-"&longitude=" +
-lon +
-"&current=temperature_2m"
-)
-.then(response => response.json())
-.then(data => {
-document.getElementById("weather").innerHTML =
-"<h3>Current Temperature</h3><p>🌡️ " +
-data.current.temperature_2m +
-" °C</p>";
-})
-.catch(error => {
-document.getElementById("weather").innerHTML =
-"Weather data unavailable";
-});
+function sendMessage(){
+const input =
+document.getElementById("message");
+const text =
+input.value;
+if(text === "") return;
+const chat =
+document.getElementById("chat");
+chat.innerHTML +=
+'<div class="user">You: ' +
+text +
+'</div>';
+chat.innerHTML +=
+'<div class="ai">OSORX AI: I heard "' +
+text +
+'". Real AI integration coming soon.</div>';
+input.value = "";
+chat.scrollTop = chat.scrollHeight;
 }
 </script>
-<div class="card">
-<h2>🚗 Traffic</h2>
-<input id="home" placeholder="Home">
-<br><br>
-<input id="work" placeholder="Work">
-<br><br>
-<button onclick="calculateTraffic()">
-Calculate
-</button>
-<div id="trafficResult" style="margin-top:15px;">
-</div>
-</div>
-<script>
-function calculateTraffic() {
-const home =
-document.getElementById("home").value;
-const work =
-document.getElementById("work").value;
-const minutes = Math.floor(Math.random() * 40) + 20;
-document.getElementById("trafficResult").innerHTML =
-"<p><strong>From:</strong> " + home + "</p>" +
-"<p><strong>To:</strong> " + work + "</p>" +
-"<p><strong>Estimated Travel Time:</strong> " + minutes + " min</p>";
-}
-</script>
-<div class="card">
-<h2>🚨 Alerts</h2>
-<p>
-Severe weather, earthquakes, transport disruptions and major global alerts.
-</p>
-</div>
-</div>
 </body>
 </html>
