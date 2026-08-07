@@ -3,107 +3,332 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OSORX</title>
+<title>OSORX | Tracking Earth's Signals</title>
+<link href="https://fonts00;700;800&display=swap" rel="stylesheet">
 <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-body {
-background: #0d1117;
-color: white;
-font-family: Arial, sans-serif;
+body{
+font-family:'Inter',sans-serif;
+background:#040b18;
+color:white;
 }
-header {
-padding: 25px 40px;
-border-bottom: 1px solid #222;
+/* HERO */
+.hero{
+min-height:100vh;
+background:
+linear-gradient(to bottom,
+rgba(0,0,0,0.2),
+rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=1920");
+background-size:cover;
+background-position:center;
 }
-.logo {
-font-size: 32px;
-font-weight: bold;
-color: #38bdf8;
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 50px;
 }
-.slogan {
-color: #9ca3af;
-margin-top: 5px;
+.logo h1{
+color:#ffffff;
+font-size:42px;
+font-weight:800;
+letter-spacing:2px;
 }
-nav {
-position: fixed;
-top: 120px;
-left: 30px;
+.logo span{
+color:#67dfff;
+font-size:12px;
 }
-nav ul {
-list-style: none;
+.menu{
+display:flex;
+gap:30px;
 }
-nav li {
-margin-bottom: 14px;
+.menu a{
+text-decoration:none;
+color:white;
+font-size:13px;
+transition:.3s;
 }
-nav a {
-color: white;
-text-decoration: none;
+.menu a:hover{
+color:#22d3ee;
 }
-nav a:hover {
-color: #38bdf8;
+/* HERO CONTENT */
+.hero-content{
+max-width:650px;
+margin-left:80px;
+margin-top:100px;
 }
-main {
-margin-left: 220px;
-padding: 40px;
+.hero-content h2{
+font-size:72px;
+line-height:1;
+font-weight:800;
+margin-bottom:25px;
 }
-.article {
-background: #161b22;
-padding: 25px;
-border-radius: 12px;
-margin-bottom: 20px;
+.hero-content p{
+font-size:20px;
+color:#dbeafe;
+line-height:1.7;
+max-width:550px;
 }
-.article h2 {
-margin-bottom: 10px;
-color: #38bdf8;
+.btn{
+display:inline-block;
+margin-top:35px;
+background:#12c7ff;
+color:white;
+text-decoration:none;
+padding:15px 35px;
+border-radius:50px;
+font-weight:600;
 }
-.article p {
-color: #c9d1d9;
-line-height: 1.6;
+.btn:hover{
+background:#00aede;
+}
+/* CARDS */
+.section{
+max-width:1400px;
+margin:auto;
+padding:40px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-top:-60px;
+}
+.card{
+position:relative;
+overflow:hidden;
+border-radius:18px;
+min-height:260px;
+border:1px solid rgba(255,255,255,0.1);
+background:#081221;
+cursor:pointer;
+}
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+position:absolute;
+}
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top,
+rgba(0,0,0,.95),
+rgba(0,0,0,.1));
+}
+.card-content{
+position:absolute;
+bottom:20px;
+left:20px;
+z-index:2;
+}
+.card-number{
+color:#22d3ee;
+font-size:26px;
+font-weight:700;
+}
+.card-title{
+font-size:20px;
+font-weight:700;
+margin-top:8px;
+}
+.card-link{
+color:#22d3ee;
+margin-top:10px;
+display:inline-block;
+}
+/* LATEST UPDATES */
+.updates{
+margin-top:40px;
+background:#071424;
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+padding:30px;
+}
+.updates-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:25px;
+}
+.updates h3{
+font-size:22px;
+}
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+.news-card{
+background:#0c1c31;
+border-radius:15px;
+overflow:hidden;
+}
+.news-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+.news-info{
+padding:15px;
+}
+.news-info h4{
+margin-bottom:10px;
+}
+.news-info span{
+color:#56cfff;
+font-size:12px;
+}
+.news-info p{
+color:#9fb7d4;
+font-size:13px;
+margin-top:8px;
+}
+@media(max-width:900px){
+.hero-content{
+margin:80px 30px;
+}
+.hero-content h2{
+font-size:48px;
+}
+.menu{
+display:none;
+}
 }
 </style>
 </head>
 <body>
-<header>
-<div class="logo">OSORX</div>
-<div class="slogan">Tracking Earth's Signals</div>
-</header>
+<section class="hero">
 <nav>
-<ul>
-<li>#</li>
-<li>#Earthquakes</a></li>
-<li><</li>
-<li><</li>
-<li><a hrefites</a></li>
-<li><a href Events</a></li>
-<li>#Signals</a></li>
-</ul>
+<div class="logo">
+<h1>OSORX</h1>
+<span>Tracking Earth's Signals</span>
+</div>
+<div class="menu">
+#HOME</a>
+#
+#
+#VOLCANOES</a>
+#TSUNAMIS</a>
+#>
+#
+#
+</div>
 </nav>
-<main>
-<div class="article">
-<h2>Signal #001</h2>
+<div class="hero-content">
+<h2>UNDERSTAND<br>OUR PLANET.</h2>
 <p>
-Strong thunderstorms are expected across parts of Central Europe
-this weekend with locally intense rainfall and hail potential.
+Real-time monitoring, weather analysis, satellite imagery,
+earth observations and global event tracking from around the world.
 </p>
+#>
 </div>
-<div class="article">
-<h2>Solar Activity Update</h2>
-<p>
-Elevated solar activity may increase aurora visibility in
-northern regions during the next 48 hours.
-</p>
+</section>
+<div class="section">
+<div class="grid">
+<div class="card">
+/photo-1500674425229-f692875b0ab7">
+<div class="card-content">
+<div class="card-number">01</div>
+<div class="card-title">Natural Phenomena</div>
+<div class="card-link">Explore →</div>
 </div>
-<div class="article">
-<h2>Global Earthquake Watch</h2>
-<p>
-Several moderate earthquakes have been recorded around the Pacific
-Ring of Fire during the past 24 hours.
-</p>
 </div>
-</main>
+<div class="card">
+1446776811953-b23d57bd21aa">
+<div class="card-content">
+<div class="card-number">02</div>
+<div class="card-title">Satellites</div>
+<div class="card-link">Explore →</div>
+</div>
+</div>
+<div class="card">
+1500375592092-40eb2168fd21">
+<div class="card-content">
+<div class="card-number">03</div>
+<div class="card-title">Volcanoes</div>
+<div class="card-link">Explore →</div>
+</div>
+</div>
+<div class="card">
+://images.unsplash.com/photo-1439405326854-014607f694d7">
+<div class="card-content">
+<div class="card-number">04</div>
+<div class="card-title">Tsunamis</div>
+<div class="card-link">Explore →</div>
+</div>
+</div>
+<div class="card">
+-1614730321146-b6fa6a46bcb4">
+<div class="card-content">
+<div class="card-number">05</div>
+<div class="card-title">Solar Storms</div>
+<div class="card-link">Explore →</div>
+</div>
+</div>
+<div class="card">
+://images.unsplash.com/photo-1473773508845-188df298d2d1">
+<div class="card-content">
+<div class="card-number">06</div>
+<div class="card-title">Fires</div>
+<div class="card-link">Explore →</div>
+</div>
+</div>
+<div class="card">
+1521295121783-8a321d551ad2">
+<div class="card-content">
+<div class="card-number">07</div>
+<div class="card-title">Global Events</div>
+<div class="card-link">Explore →</div>
+</div>
+</div>
+</div>
+<div class="updates">
+<div class="updates-header">
+<h3>Latest Updates</h3>
+<span>View All →</span>
+</div>
+<div class="news-grid">
+<div class="news-card">
+.com/photo-1500375592092-40eb2168fd21">
+<div class="news-info">
+<h4>Hurricane Watch in the North Atlantic</h4>
+<span>Weather</span>
+<p>2 hours ago</p>
+</div>
+</div>
+<div class="news-card">
+https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4">
+<div class="news-info">
+<h4>Strong Solar Flare Detected</h4>
+<span>Solar Storms</span>
+<p>5 hours ago</p>
+</div>
+</div>
+<div class="news-card">
+1500674425229-f692875b0ab7">
+<div class="news-info">
+<h4>Volcano Activity Increases in Asia</h4>
+<span>Volcanoes</span>
+<p>8 hours ago</p>
+</div>
+</div>
+<div class="news-card">
+.com/photo-1446776811953-b23d57bd21aa">
+<div class="news-info">
+<h4>Global Observation Summary</h4>
+<span>Global Events</span>
+<p>12 hours ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
