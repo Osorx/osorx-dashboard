@@ -3,113 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OSORX AI</title>
+<title>OSORX</title>
 <style>
-body{
-margin:0;
-background:#111827;
-font-family:Arial, sans-serif;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-.container{
-width:90%;
-max-width:700px;
-background:#1f2937;
-padding:30px;
-border-radius:20px;
-box-shadow:0 0 20px rgba(0,0,0,.3);
+body {
+background: #0d1117;
+color: white;
+font-family: Arial, sans-serif;
 }
-.avatar{
-width:150px;
-height:150px;
-border-radius:50%;
-background:#2563eb;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:50px;
+header {
+padding: 25px 40px;
+border-bottom: 1px solid #222;
 }
-h1{
-text-align:center;
+.logo {
+font-size: 32px;
+font-weight: bold;
+color: #38bdf8;
 }
-#chat{
-height:250px;
-overflow:auto;
-background:#111827;
-padding:15px;
-border-radius:10px;
-margin-bottom:15px;
+.slogan {
+color: #9ca3af;
+margin-top: 5px;
 }
-input{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-box-sizing:border-box;
+nav {
+position: fixed;
+top: 120px;
+left: 30px;
 }
-button{
-margin-top:10px;
-padding:12px 20px;
-border:none;
-border-radius:10px;
-background:#2563eb;
-color:white;
-cursor:pointer;
+nav ul {
+list-style: none;
 }
-.user{
-color:#60a5fa;
-margin-bottom:10px;
+nav li {
+margin-bottom: 14px;
 }
-.ai{
-color:#34d399;
-margin-bottom:10px;
+nav a {
+color: white;
+text-decoration: none;
+}
+nav a:hover {
+color: #38bdf8;
+}
+main {
+margin-left: 220px;
+padding: 40px;
+}
+.article {
+background: #161b22;
+padding: 25px;
+border-radius: 12px;
+margin-bottom: 20px;
+}
+.article h2 {
+margin-bottom: 10px;
+color: #38bdf8;
+}
+.article p {
+color: #c9d1d9;
+line-height: 1.6;
 }
 </style>
 </head>
 <body>
-<div class="container">
-<div class="avatar">
-🤖
+<header>
+<div class="logo">OSORX</div>
+<div class="slogan">Tracking Earth's Signals</div>
+</header>
+<nav>
+<ul>
+<li>#</li>
+<li>#Earthquakes</a></li>
+<li><</li>
+<li><</li>
+<li><a hrefites</a></li>
+<li><a href Events</a></li>
+<li>#Signals</a></li>
+</ul>
+</nav>
+<main>
+<div class="article">
+<h2>Signal #001</h2>
+<p>
+Strong thunderstorms are expected across parts of Central Europe
+this weekend with locally intense rainfall and hail potential.
+</p>
 </div>
-<h1>OSORX AI</h1>
-<div id="chat">
-<div class="ai">
-Hello. I am OSORX AI. How can I help you today?
+<div class="article">
+<h2>Solar Activity Update</h2>
+<p>
+Elevated solar activity may increase aurora visibility in
+northern regions during the next 48 hours.
+</p>
 </div>
+<div class="article">
+<h2>Global Earthquake Watch</h2>
+<p>
+Several moderate earthquakes have been recorded around the Pacific
+Ring of Fire during the past 24 hours.
+</p>
 </div>
-<input
-id="message"
-placeholder="Type your message..."
->
-<button onclick="sendMessage()">
-Send
-</button>
-</div>
-<script>
-function sendMessage(){
-const input =
-document.getElementById("message");
-const text =
-input.value;
-if(text === "") return;
-const chat =
-document.getElementById("chat");
-chat.innerHTML +=
-'<div class="user">You: ' +
-text +
-'</div>';
-chat.innerHTML +=
-'<div class="ai">OSORX AI: I heard "' +
-text +
-'". Real AI integration coming soon.</div>';
-input.value = "";
-chat.scrollTop = chat.scrollHeight;
-}
-</script>
+</main>
 </body>
 </html>
